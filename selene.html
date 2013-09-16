@@ -1,0 +1,1042 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <!--
+         Theme: Selene v1.
+         Design: Thierry Tournie (www.thierry.tournie.com)
+    -->
+
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+         <title>{Title}{block:PostSummary} | {PostSummary}{/block:PostSummary}{block:SearchPage} | {lang:Search results for SearchQuery}{/block:SearchPage}</title>
+         <meta name="description" content="{MetaDescription}" />
+         <meta name="if:Show description" content="1" />
+         <meta name="if:Show search" content="1" />
+         <meta name="text:Twitter name" content="" />
+         <meta name="text:Disqus Shortname" content="" />
+         <meta name="text:Google Analytics ID" content="" />
+         <link rel="shortcut icon" href="{Favicon}" />
+         <link rel="alternate" type="application/rss+xml" title="{Title}" href="{RSS}" />
+         <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">
+
+          <!-- DEFAULT COLORS -->
+        <meta name="color:Header" content="#1F1F1F"/>
+        <meta name="color:Nav background" content="#000000"/>
+        <meta name="color:Text header" content="#ffffff"/>
+
+
+    <!-- Styles -->
+
+    <style type="text/css">
+
+    /*----- GENERAL -----*/
+
+         header, footer, section, article, nav, aside {
+            display: block;
+         }
+
+         body {
+            background: #ffffff;
+            color: #3D3D3D;
+            font-family: verdana,sans-serif;;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 13px;
+         }
+
+         h1, h2, h3, hQ {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 200;
+         }
+
+         h1 {
+            font-size: 50px;
+            line-height: 25px;
+            font-weight: 200;
+            font-family: 'Raleway', sans-serif;
+         }
+
+         h2 {
+            font-size: 26px;
+            line-height: 37px;
+         }
+
+         h3 {
+            font-size: 21px;
+            line-height: 27px;
+         }
+
+         h1.cufon {
+            padding-top: 25px;
+         }
+
+         a:link, a:visited {
+            color: #222222;
+            text-decoration: none;
+         }
+
+         a:hover, a:active {
+            text-decoration: underline;
+         }
+
+         hr{
+            border:0 #ccc solid;
+            border-top-width:1px;
+            clear:both;
+            height:0;
+         }
+
+         ol{list-style:decimal}
+
+         ul{list-style:disc}
+
+         li{margin-left:30px}
+
+         p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset{
+            margin-bottom:15px;
+            line-height: 17px;
+         }
+
+         #main {
+            padding: 0px;
+            width: 893px;
+            margin: 0 auto;
+            padding-top: 270px;
+         }
+
+         #main-container {
+            background-color: #e9e9e9;
+         }
+
+         #infsrc-loading {
+            display: none;
+         }
+
+    /*----- MASTHEAD -----*/
+
+         .noMeta > div {
+            padding: 0px;
+         }
+
+         #masthead {
+            margin-bottom: 0px;
+            background-color: {color:Header};
+            height: 190px;
+            border-bottom: 1px;
+            border-bottom-style: solid;
+            border-color: rgb(201, 199, 199);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 100;
+         }
+
+         #masthead h1 {
+            margin-bottom: 0;
+         }
+
+         #masthead h1 a:link, #masthead h1 a:visited {
+            text-transform: Uppercase;
+            color: #ffffff;
+            text-decoration: none;
+         }
+
+         #masthead h1 a:active {
+            outline: 0;
+         }
+
+         #masthead p {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 0;
+         }
+
+         #masthead a:link, #masthead a:visited {
+            color: #fff;
+         }
+
+         #siteDescription{
+            font-size: 13px;
+            color: #ffffff;
+            text-transform: Uppercase;
+            margin-top: 20px;
+            margin-bottom: -5px;
+            padding: 10px 0 0 0;
+         }
+
+         #mini-title {
+            text-transform: uppercase;
+            color: #ffffff;
+            position: absolute;
+            top: 1px;
+            left: 10px;
+            font-weight: 200;
+            font-family: 'Raleway', sans-serif;
+            font-size: 34px;
+            opacity: 0;
+         }
+
+         #masthead #mini-title a {
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 200;
+            font-family: 'Raleway', sans-serif;
+            font-size: 34px;
+            text-decoration: none;
+            line-height: inherit;
+         }
+
+         #mini-title a:hover {
+            text-decoration: none;
+         }
+
+    /*----- SEARCH FORM -----*/
+
+         #frmSearch {
+            padding-top: 40px;
+            display: none;
+         }
+
+         #txtSearch {
+            background: url(http://static.tumblr.com/bpryy0m/6lRl6gmys/search.jpg) left no-repeat;
+            width: 225px;
+            padding: 2px 0 0 20px;
+            font: 12px/12px Georgia, "Times New Roman", Times, serif;
+            color: #222;
+            border: solid 1px;
+            border-color: rgb(97, 97, 97);
+         }
+
+    /*----- MAIN HEADER NAV STRIP -----*/
+
+         #mainNav {
+            margin-top: 104px;
+            padding: 13px 0 14px 0;
+            background-color: {color:Nav background};
+            position: relative;
+         }
+
+         #mainNav.description {
+            margin-top: 65px;
+         }
+
+         #mainNav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         #mainNav li {
+            margin: 5px;
+            display: inline;
+            padding: 0;
+         }
+
+         #mainNav a:link, #mainNav a:visited {
+            padding: 0;
+            font-size: 14px;
+            line-height: 14px;
+            margin: 0 2px;
+            text-decoration: none;
+            color: {color:Text header};
+            text-transform: Uppercase;
+         }
+
+         #mainNav a:hover, #mainNav a:active {
+            outline: none;
+            text-decoration: none;
+            border-bottom: 1px solid #ffffff;
+         }
+
+         #mainNav a.active {
+            text-decoration: none;
+            border-bottom: 1px solid #ffffff;
+         }
+
+    /*----- ARTICLE META INFO -----*/
+
+         #designline {
+            margin-top: 50px;
+         }
+
+         h5{
+            position: relative;
+            top: -35px;
+            margin-bottom: 0px;
+            font-family: Georgia, serif;
+            font-size: 10px;
+            color: #bca474;
+            text-decoration: none;
+            text-transform: Uppercase;
+            font-weight: bold;
+            border-bottom: 1px solid #bca474;
+            background: #fff;
+         }
+
+         h5 a:link, .line a:visited{
+            font-family: Georgia, serif;
+            font-size: 10px;
+            color: #bca474;
+            text-decoration: none;
+            text-transform: Uppercase;
+            font-weight: bold;
+         }
+
+         h5 a:hover{
+            text-decoration: underline;
+         }
+
+         h5 abbr{
+            display: inline-block;
+            position: relative;
+            margin: 0 auto;
+            padding: 0 8px;
+            background: #fff;
+            top: 10px;
+         }
+
+         h5.postDate a{
+            color: #bca474;
+         }
+
+    /*----- ARTICLE -----*/
+
+         body.index .article {
+            background: #fff;
+            margin-bottom: 55px;
+            text-align: left;
+            position: relative;
+            width: 364px;
+            -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+            -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,.3);
+            -webkit-transition: all .15s linear;
+            -moz-transition: all .15s linear;
+            transition: all .15s linear;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+          }
+
+          body.permalink .article {
+            margin: 0 auto;
+            background: #fff;
+            width: 800px;
+            margin-bottom: 55px;
+            text-align: left;
+            position: relative;
+            -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+            -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,.3);
+            -webkit-transition: all .15s linear;
+            -moz-transition: all .15s linear;
+            transition: all .15s linear;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+          }
+
+         body.index .article-content {
+            -webkit-border-radius: 5px 5px 0px 0px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            -o-border-radius: 5px 5px 0px 0px;
+            -ms-border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0px;
+          }
+
+         body.permalink .article-content {
+            padding: 50px;
+            text-align: center;
+            -webkit-border-radius: 5px 5px 0px 0px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            -o-border-radius: 5px 5px 0px 0px;
+            -ms-border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0px;
+          }
+
+         article img {
+            border: none;
+            margin-bottom: 15px;
+            max-width: 500px;
+         }
+
+         body.permalink article img {
+            max-width: 700px;
+         }
+
+         article p img {
+            margin: 0;
+         }
+         article > div {
+            padding: 0px;
+            overflow: hidden;
+         }
+         article .searchPage {
+            margin: 35px 0 0 0;
+         }
+
+         .searchPageText {
+            margin: 0 0 30px 0;
+         }
+
+         article .meta a:link, article .meta a:visited {
+            text-decoration: none;
+         }
+
+         article .meta a:hover, article .meta a:active {
+            text-decoration: underline;
+         }
+
+         article h2 {
+            text-align: center;
+            color: #222222;
+            line-height: 30px;
+         }
+
+         body.index article.quote,
+         body.index article.chat,
+         body.index article.link,
+         body.index article.text,
+         body.index article.audio,
+         body.index article.video {
+            padding: 18px;
+         }
+
+         body.index article.photo {
+            width: 400px
+         }
+
+         body.permalink article .body-text {
+            text-align: justify;
+         }
+
+         article h2 a:link, article h2 a:visited {
+            text-transform: Uppercase;
+            color: #222;
+            text-decoration: none;
+         }
+
+         article h2 a:hover, article h2 a:active {
+            text-decoration: none;
+            border-bottom: 1px solid #222;
+         }
+
+         blockquote {
+            border-left: 2px solid #bca474;
+            margin-left: 0;
+            padding-left: 1em;
+         }
+
+         #quoteSource{
+            margin: 0 auto;
+            text-align: left;
+         }
+
+         #quoteText h2 {
+            text-align: left;
+            color: #222222;
+         }
+
+         article .chat {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+         }
+
+         article .chat li {
+            margin: 0 0 2px;
+            padding: 2px 0 2px 0;
+         }
+
+         .photoCaption {
+            text-align: center;
+         }
+
+         a.reblog_button {
+         }
+
+         .date_and_notes {
+            float: left;
+         }
+
+         .reblog_and_like {
+            float: right;
+            margin-left: 7px;
+         }
+
+         .rebloglike {
+            float: right;
+            margin-left: 7px;
+         }
+
+         article.photo #tags {
+            margin-right: 18px;
+            margin-left: 18px;
+         }
+
+         #tags a {
+            color: #33727E;
+         }
+
+         .note-count, .permalink-count {
+            color: #8A8A8A;
+            vertical-align: middle;
+         }
+
+         .note-count {
+            margin-left: 4px;
+         }
+
+         .note-count a {
+            color: #8A8A8A;
+            text-decoration: none;
+         }
+
+         .permalink-text a {
+            color: #ffffff;
+         }
+
+         .note-count a:hover {
+            color: #504F4F;
+            text-decoration: none;
+         }
+
+         article.photo .like_and_reblog_buttons {
+            margin: 18px;
+         }
+
+         .like_and_reblog_buttons {
+            padding: 7px;
+            -webkit-border-radius: 0px 0px 5px 5px;
+            -moz-border-radius: 0px 0px 5px 5px;
+            -o-border-radius: 0px 0px 5px 5px;
+            -ms-border-radius: 0px 0px 5px 5px;
+            border-radius: 0px 0px 5px 5px;
+            border-top: solid 1px rgb(226, 226, 226);
+         }
+
+    /*----- AUDIO PLAYER -----*/
+
+         .audio {
+            padding-top: 7px;
+         }
+
+         .audioc {
+            background-image:url('http://static.tumblr.com/f1whv92/9iCl6bfgp/audiocircle.png');
+            background-repeat: no-repeat;
+            height: 41px;
+            width: 41px;
+         }
+
+         .audioCaption {
+            margin-top: 1px;
+         }
+
+         .audioleft {
+            width: 41px;
+            float: left;
+          }
+
+         .audioright {
+            width: 444px;
+            float: right;
+          }
+
+         .audioContainer {
+            margin-top: 5px;
+         }
+
+         .audioClear {
+            clear:both;
+         }
+
+         body.index iframe.soundcloud_audio_player {
+            width: 364px;
+         }
+
+         body.permalink iframe.soundcloud_audio_player {
+            width: inherit;
+         }
+
+    /*----- ARTICLE NOTES -----*/
+
+         .notes {
+            border-top: 1px solid #E2E2E2;
+            list-style: none;
+            padding: 20px 0 5px 0;
+            margin: 30px 0 0 0;
+         }
+         .notes li {
+            margin: 0;
+         }
+
+         .notes .avatar {
+            margin: 0 5px 0 0;
+            position: relative;
+            top: 5px;
+         }
+
+         .notes blockquote {
+            margin: 10px 0 0 35px;
+            padding-left: 10px;
+            border-left: 2px solid #222222;
+         }
+
+         article.video .media {
+            height: 0;
+            padding-top: 25px;
+            padding-bottom: 49.5%;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+         }
+
+         body.permalink article.video .media {
+            padding-bottom: 52.7%;
+         }
+
+         article.video .media iframe {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+         }
+
+         article.audio .media {
+            width: 100%;
+            overflow: hidden;
+         }
+
+    /*----- PAGE NAVIGATION -----*/
+
+         #pageNav {
+            margin-top: 20px;
+            border-top: 1px solid #222;
+            display: none;
+         }
+
+         #pageNav ul {
+            list-style: none;
+            padding: 10px 15px;
+            margin: 10px 0;
+         }
+
+         #pageNav li {
+            margin: 0;
+            display: inline;
+         }
+
+         #pageNav a:link, #pageNav a:visited {
+            font: 11px Georgia, "Times New Roman", Times, serif;
+            padding: 0;
+            margin: 0 2px;
+            background: #34hdf5;
+            color: #222;
+            text-decoration: none;
+         }
+
+         #pageNav a:hover, #pageNav a:active, #pageNav a.active:link, #pageNav a.active:visited {
+            text-decoration: underline;
+         }
+
+         #pageNavOlder:after {
+            content: " »";
+            font-size: 10px;
+         }
+
+         #pageNavNewer:before {
+            content: "« ";
+         }
+
+    /*----- FOOTER META -----*/
+
+         #sitemeta {
+            border-top: 1px solid #222;
+            color: #222;
+            padding: 20px 0 32px 0;
+            border-top-color: rgb(175, 175, 175);
+            font-family: verdana,sans-serif;
+            font-size: 11px;
+            margin-top: 100px;
+         }
+
+         #sitemeta p {
+            margin: 0;
+         }
+
+         #sitemeta a:link, #sitemeta a:visited {
+            color: #222;
+            font-weight: bold;
+         }
+
+    {CustomCSS}
+    </style>
+
+    <!-- Scripts -->
+
+    <!--[if IE]>
+         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    <script>
+         $(function() {
+            var search = $("#txtSearch").val();
+            var placeholder = "Search...";
+            var fadeToOpacity = 0.4;
+            $("#txtSearch").fadeTo("normal", fadeToOpacity);
+            if (search == "") {
+         $("#txtSearch").val(placeholder);
+         }
+         $("#txtSearch").blur(function() {
+            search = $("#txtSearch").val();
+            if (!(search != "" && search != placeholder)) {
+            $("#txtSearch").val(placeholder);
+         }
+         $("#txtSearch").fadeTo("normal", fadeToOpacity);
+         });
+         $("#txtSearch").focus(function() {
+            search = $("#txtSearch").val();
+            if (search == placeholder) {
+            $("#txtSearch").val("");
+         }
+         $("#txtSearch").fadeTo("normal", 1);
+         });
+         $("#btnSearch").click(function() {
+         $("#frmSearch").slideToggle("normal");
+         $(this).toggleClass("active");
+         });
+         });
+    </script>
+
+    </head>
+    <body class="{block:IndexPage}index{/block:IndexPage}{block:PermalinkPage}permalink{/block:PermalinkPage}">
+        <div id='main-container'>
+             <header id="masthead" class="clearfix">
+                <div id="thehead">
+                      <h1 class="cufon"><a href="/">{Title}</a></h1>
+
+             {block:Description}
+                <div id="siteDescription">{Description}</div>
+             {block:Description}
+
+                   <nav id="mainNav" class="{block:Description}description{block:Description}">
+                      <span id="mini-title"><a href="/">{Title}</a></span>
+                      {block:HasPages}
+                      {block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
+                      {/block:HasPages}
+                      {block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
+                      {block:SubmissionsEnabled}<li><a href="/submit">Submit</a></li>{/block:SubmissionsEnabled}
+                      <li><a href="/archive">Archive</a></li>
+                      <li><a href="/random">Random</a></li>
+                      <li><a href="{RSS}">RSS</a></li>
+                      {block:IfTwitterName}
+                      <li><a href="http://twitter.com/{text:Twitter name}">Twitter</a></li>
+                      {/block:IfTwitterName}
+                      {block:Likes}
+                        <li><a href="http://www.tumblr.com/liked/by/{Name}">Likes</a></li>
+                      {/block:Likes}
+                   </nav>
+                </div>
+             </header>
+
+             <section id="main" class="clearfix">
+                <div id="post">
+                 {block:SearchPage}
+                    <article>
+                       <div>
+                          <div class="searchPage">
+                             <h2>Search results for <a href="{URLSafeSearchQuery}">{SearchQuery}</a></h2>
+                          </div>
+                                {block:NoSearchResults}
+                                <div class="searchPageText">
+                                   <p>I’m sorry, but we couldn't find anything matching "<b>{SearchQuery}</b>". Suggestions:</p>
+                                   <ul>
+                                      <li>Make sure all words are spelled correctly.</li>
+                                      <li>Try different keywords.</li>
+                                      <li>Try more general keywords.</li>
+                                   </ul>
+                                </div>
+                                {/block:NoSearchResults}
+                       </div>
+                    </article>
+                 {/block:SearchPage}
+
+                 {block:TagPage}
+                 <article>
+                    <div>
+                       <div class="searchPage">
+                       <h2>Posts tagged <a href="{TagURL}">{Tag}</a></h2>
+                       </div>
+                    </div>
+                 </article>
+                 {/block:TagPage}
+            {block:Posts}
+                     <article class="article {PostType} {block:IndexPage}index{/block:IndexPage}" class="article-noscroll">
+                        <div class="article-content">
+                           {block:Text}
+                              {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                              <div class="body-text">{Body}</div>
+                           {/block:Text}
+
+                           {block:Photo}
+                              {block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}{/block:PermalinkPage}
+                              {block:IndexPage}{LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}" />{LinkCloseTag}{/block:IndexPage}
+                              {block:Caption}<div class="photoCaption">{Caption}</div>{/block:Caption}
+                           {/block:Photo}
+
+                           {block:Photoset}
+                              <div class="media">{Photoset-400}</div>
+                              {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                           {/block:Photoset}
+
+                           {block:Quote}
+                              <div id="quoteText"><h2>{Quote}</h2></div>
+                              {block:Source}<div id="quoteSource"><p>&mdash;{Source}</p></div>{/block:Source}
+                           {/block:Quote}
+
+                           {block:Link}
+                              <h2><a href="{URL}" {Target}>{Name}</a></h2>
+                              {block:Description}
+                              <div>{Description}</div>
+                              {/block:Description}
+                           {/block:Link}
+
+                          {block:Chat}
+                             {block:Title}<h2>{Title}</h2>{/block:Title}
+                             <ul class="chat">
+                                {block:Lines}
+                                <li>{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                                {/block:Lines}
+                             </ul>
+                          {/block:Chat}
+
+                          {block:Audio}
+                             <div class="audioleft">
+                                <div class="audioc">
+                                <div class="audio">{AudioPlayerBlack}</div>
+                                </div>
+                             </div>
+                             <div class="audioright">
+                                <div class="audioCaption">{block:Artist}<b>{Artist}</b>{/block:Artist}
+                <p>&mdash;{block:TrackName}{TrackName}{/block:TrackName}</p>
+                                </div>
+                             </div>
+                             <div class="audioClear"></div>
+                             <div class="audioContainer">
+                                {block:Caption}{Caption}{/block:Caption}
+                             </div>
+                          {/block:Audio}
+
+                          {block:Video}
+                             <div class="media">{Video-500}</div>
+                             {block:Caption}<div>{Caption}</div>{/block:Caption}
+                          {/block:Video}
+
+                          {block:Answer}
+                             <h3>{Asker} asked: {Question}</h3>
+                             {Answer}
+                          {/block:Answer}
+
+                          {block:Date}
+
+                                    {block:IfDisqusShortname}
+                  <script type="text/javascript">
+                  //<![CDATA[
+                  (function() {
+                    var links = document.getElementsByTagName('a');
+                    var query = '?';
+                    for(var i = 0; i < links.length; i++) {
+                      if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                      }
+                    }
+                    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+                    })();
+                    //]]>
+                    </script>
+                  {/block:IfDisqusShortname}
+
+                          {block:PostNotes}
+                             {PostNotes}
+                          {/block:PostNotes}
+
+                          {block:Date}
+                        {block:HasTags}
+                        <div id="tags">
+                            {block:Tags}
+                                <a href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        </div>
+                        {/block:HasTags}
+                        </div>
+                        <div class="like_and_reblog_buttons">
+                            <div class="date_and_notes">
+                                <span class="note-count"><span class="note-count-text">{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date} - {NoteCount} notes</span></span>
+                            </div>
+                            <div class="reblog_and_like">
+                                <div class="rebloglike">{ReblogButton}</div>
+                                <div class="rebloglike">{LikeButton}</div>
+                            </div>
+                        <div>
+                     </article>
+                {/block:Posts}
+
+
+                 {block:PermalinkPagination}
+                    <nav id="pageNav">
+                       <ul class="clearfix">
+                          {block:PreviousPost}<li><a href="{PreviousPost}" id="pageNavNewer">Previous</a></li>{/block:PreviousPost}
+                          {block:NextPost}<li><a href="{NextPost}" id="pageNavOlder">Next</a></li>{/block:NextPost}
+                       </ul>
+                    </nav>
+                 {/block:PermalinkPagination}
+
+                 {block:Pagination}
+                    <nav id="pageNav">
+                       <ul class="clearfix">
+                         {block:PreviousPage}<li><a href="{PreviousPage}" id="pageNavNewer">Newer</a></li>{/block:PreviousPage}
+                         {block:JumpPagination length="5"}
+                         {block:CurrentPage}<li><a href="{URL}" class="active">{PageNumber}</a></li>{/block:CurrentPage}
+                         {block:JumpPage}<li><a href="{URL}">{PageNumber}</a></li>{/block:JumpPage}
+                         {/block:JumpPagination}
+                         {block:NextPage}<li><a href="{NextPage}" id="pageNavOlder">Older</a></li>{/block:NextPage}
+                       </ul>
+                    </nav>
+                 {/block:Pagination}
+
+                 {block:DayPagination}
+                    <nav id="pageNav">
+                       <ul class="clearfix">
+                          {block:PreviousDayPage}<li><a href="{PreviousDayPage}">&laquo; {DayOfMonth} {ShortMonth}</a></li>{/block:PreviousDayPage}{block:NextDayPage}|<li><a href="{NextDayPage}">{DayOfMonth} {ShortMonth} &raquo;</a></li>{block:NextDayPage}
+                       </ul>
+                    </nav>
+                 {/block:DayPagination}
+                </div>
+             </section>
+
+             <footer id="sitemeta">
+                <div class="clearfix">
+                   <div class="thefooter">
+                      <p>Selene Theme designed by <a href="http://thierrytournie.com">Thierry Tournié</a></p>
+                   </div>
+                </div>
+             </footer>
+
+             {block:IfGoogleAnalyticsID}
+                <script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker=_gat._getTracker("{text:Google Analytics ID}");pageTracker._trackPageview()}catch(err){}</script>
+             {block:IfGoogleAnalyticsID}
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://static.tumblr.com/8hquahf/Ii2msemqi/masonry.pkgd.min.js"></script>
+        <script src="http://static.tumblr.com/8hquahf/OWVmsemuf/jquery.infinitescroll.min.js"></script>
+        <script src="http://static.tumblr.com/8hquahf/Ddhmsi09o/imagesloaded.pkgd.min.js"></script>
+        <script>
+        (function () {
+        var container = $('body.index #post');
+
+        container.imagesLoaded( function(){
+            container.masonry({
+             itemSelector : 'article.index',
+             columnWidth: 425,
+             gutter: 30
+
+         });
+        });
+
+        container.infinitescroll({
+            navSelector: "body.index #pageNav",
+            nextSelector: "body.index #pageNavOlder",
+            itemSelector: "article.index",
+            loading: {
+                img: "",
+                msgText: "",
+                finishedMsg: '',
+            }
+        },
+
+        function (newElements) {
+            var newElems = $(newElements).css({
+                opacity: 0
+            });
+            newElems.imagesLoaded(function () {
+                newElems.animate({
+                    opacity: 1
+                });
+                container.masonry('appended', newElems, true);
+            });
+        });
+    })();
+
+
+    $(document).ready(function(){
+        $(window).scroll(function () {
+
+              var value = $(this).scrollTop();
+              console.log(value);
+            if ( value > 50 && value < 100 ) {
+                $("#masthead").animate({"height" : "161px"},10);
+                $("#mainNav").animate({"margin-top" : "77px"},10);
+                $("#mini-title").css("opacity", "0.3");
+                $("#thehead h1 a").css("opacity", "0.7");
+                $("#siteDescription").hide();
+                $("#thehead h1").show();
+            } else if (value > 100 && value < 165) {
+                $("#siteDescription").hide();
+                $("#masthead").animate({"height" : "132px"},10);
+                $("#mainNav").animate({"margin-top" : "48px"},10);
+                $("#mini-title").css("opacity", "0.6");
+                $("#thehead h1 a").css("opacity", "0.4");
+                $("#thehead h1").show();
+            } else if (value > 165 && value < 220) {
+                $("#siteDescription").hide();
+                $("#masthead").animate({"height" : "103px"},10);
+                $("#mainNav").animate({"margin-top" : "60px"},10);
+                $("#mini-title").css("opacity", "0.9");
+                $("#thehead h1 a").css("opacity", "0");
+                $("#thehead h1").hide();
+            } else if (value > 220 && value < 270) {
+                $("#siteDescription").hide();
+                $("#masthead").animate({"height" : "74px"},10);
+                $("#mainNav").animate({"margin-top" : "32px"},10);
+                $("#mini-title").css("opacity", "1");
+                $("#thehead h1").hide();
+            } else if (value > 270) {
+                $("#siteDescription").hide();
+                $("#masthead").animate({"height" : "45px"},10);
+                $("#mainNav").animate({"margin-top" : "0px"},10);
+                $("#mini-title").css("opacity", "1");
+                $("#thehead h1").hide();
+            } else {
+                $("#masthead").animate({"height" : "190px"},10);
+                if($("#mainNav").hasClass("description")) {
+                    $("#mainNav").animate({"margin-top" : "65px"},10);
+                } else {
+                    $("#mainNav").animate({"margin-top" : "104px"},10);
+                }
+                $("#mini-title").css("opacity", "0");
+                $("#thehead h1 a").css("opacity", "1");
+                $("#siteDescription").show();
+                $("#thehead h1").show();
+            }
+        });
+    });
+
+
+    </script>
+    </body>
+    </html>
